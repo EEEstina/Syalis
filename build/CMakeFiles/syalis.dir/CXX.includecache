@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.cc
+util.h
+/mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.h
+
+/mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.h
+pthread.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/syscall.h
+-
+stdio.h
+-
+zconf.h
+-
+stdint.h
+-
+

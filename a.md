@@ -1,0 +1,42 @@
+# Syalis
+
+## 开发环境
+
+Ubuntu 20.04
+gcc 9.1
+cmake xmake
+
+## 项目路径
+
+bin ------------ 二进制
+build ---------- 中间文件
+camke ---------- cmake 函数文件夹
+CMakeLists.txt - cmake 定义文件
+lib ------------ 库的输出
+Makefile ------- makefile 文件
+syalis --------- 源代码
+tests ---------- 测试代码
+
+## 日志系统
+
+1. Log4j
+    Logger (定义日志类别)
+      |---Formatter (日志格式)
+    Appender (日志输出位置)
+2. s
+
+## 协程库封装
+
+将异步的操作封装成同步
+
+## socket 函数库
+
+## http 协议开发
+
+## 分布式协议库
+
+把逻辑业务抽象成插件
+把服务器交互的逻辑放在插件里
+把功能、业务和系统业务分离
+
+## 推荐系统

@@ -1,0 +1,4 @@
+/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/test.dir
+/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/syalis.dir
