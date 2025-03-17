@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC
 
 CXX_DEFINES = -Dsyalis_EXPORTS
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/mnt/c/Users/Estin/Documents/GitHub/Syalis/. 
 

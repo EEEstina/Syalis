@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libsyalis.so -o ../lib/libsyalis.so CMakeFiles/syalis.dir/syalis/log.cc.o CMakeFiles/syalis.dir/syalis/util.cc.o 
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libsyalis.so -o ../lib/libsyalis.so CMakeFiles/syalis.dir/syalis/log.cc.o CMakeFiles/syalis.dir/syalis/util.cc.o CMakeFiles/syalis.dir/syalis/config.cc.o 

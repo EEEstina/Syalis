@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Estin/Desktop/s/b/syalis
+CMAKE_SOURCE_DIR = /mnt/c/Users/Estin/Documents/GitHub/Syalis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Estin/Desktop/s/b/syalis/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Estin/Documents/GitHub/Syalis/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/syalis.dir/depend.make
@@ -59,43 +59,58 @@ include CMakeFiles/syalis.dir/flags.make
 
 CMakeFiles/syalis.dir/syalis/log.cc.o: CMakeFiles/syalis.dir/flags.make
 CMakeFiles/syalis.dir/syalis/log.cc.o: ../syalis/log.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/syalis.dir/syalis/log.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/syalis.dir/syalis/log.cc.o -c /mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/log.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/syalis.dir/syalis/log.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/syalis.dir/syalis/log.cc.o -c /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.cc
 
 CMakeFiles/syalis.dir/syalis/log.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/syalis.dir/syalis/log.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/log.cc > CMakeFiles/syalis.dir/syalis/log.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.cc > CMakeFiles/syalis.dir/syalis/log.cc.i
 
 CMakeFiles/syalis.dir/syalis/log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/syalis.dir/syalis/log.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/log.cc -o CMakeFiles/syalis.dir/syalis/log.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.cc -o CMakeFiles/syalis.dir/syalis/log.cc.s
 
 CMakeFiles/syalis.dir/syalis/util.cc.o: CMakeFiles/syalis.dir/flags.make
 CMakeFiles/syalis.dir/syalis/util.cc.o: ../syalis/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/syalis.dir/syalis/util.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/syalis.dir/syalis/util.cc.o -c /mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/syalis.dir/syalis/util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/syalis.dir/syalis/util.cc.o -c /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.cc
 
 CMakeFiles/syalis.dir/syalis/util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/syalis.dir/syalis/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.cc > CMakeFiles/syalis.dir/syalis/util.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.cc > CMakeFiles/syalis.dir/syalis/util.cc.i
 
 CMakeFiles/syalis.dir/syalis/util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/syalis.dir/syalis/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.cc -o CMakeFiles/syalis.dir/syalis/util.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.cc -o CMakeFiles/syalis.dir/syalis/util.cc.s
+
+CMakeFiles/syalis.dir/syalis/config.cc.o: CMakeFiles/syalis.dir/flags.make
+CMakeFiles/syalis.dir/syalis/config.cc.o: ../syalis/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/syalis.dir/syalis/config.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/syalis.dir/syalis/config.cc.o -c /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.cc
+
+CMakeFiles/syalis.dir/syalis/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/syalis.dir/syalis/config.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.cc > CMakeFiles/syalis.dir/syalis/config.cc.i
+
+CMakeFiles/syalis.dir/syalis/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/syalis.dir/syalis/config.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.cc -o CMakeFiles/syalis.dir/syalis/config.cc.s
 
 # Object files for target syalis
 syalis_OBJECTS = \
 "CMakeFiles/syalis.dir/syalis/log.cc.o" \
-"CMakeFiles/syalis.dir/syalis/util.cc.o"
+"CMakeFiles/syalis.dir/syalis/util.cc.o" \
+"CMakeFiles/syalis.dir/syalis/config.cc.o"
 
 # External object files for target syalis
 syalis_EXTERNAL_OBJECTS =
 
 ../lib/libsyalis.so: CMakeFiles/syalis.dir/syalis/log.cc.o
 ../lib/libsyalis.so: CMakeFiles/syalis.dir/syalis/util.cc.o
+../lib/libsyalis.so: CMakeFiles/syalis.dir/syalis/config.cc.o
 ../lib/libsyalis.so: CMakeFiles/syalis.dir/build.make
 ../lib/libsyalis.so: CMakeFiles/syalis.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ../lib/libsyalis.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library ../lib/libsyalis.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/syalis.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +123,6 @@ CMakeFiles/syalis.dir/clean:
 .PHONY : CMakeFiles/syalis.dir/clean
 
 CMakeFiles/syalis.dir/depend:
-	cd /mnt/c/Users/Estin/Desktop/s/b/syalis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Estin/Desktop/s/b/syalis /mnt/c/Users/Estin/Desktop/s/b/syalis /mnt/c/Users/Estin/Desktop/s/b/syalis/build /mnt/c/Users/Estin/Desktop/s/b/syalis/build /mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/syalis.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/Users/Estin/Documents/GitHub/Syalis/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/Estin/Documents/GitHub/Syalis /mnt/c/Users/Estin/Documents/GitHub/Syalis /mnt/c/Users/Estin/Documents/GitHub/Syalis/build /mnt/c/Users/Estin/Documents/GitHub/Syalis/build /mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/syalis.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/syalis.dir/depend
 

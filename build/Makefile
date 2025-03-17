@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Estin/Desktop/s/b/syalis
+CMAKE_SOURCE_DIR = /mnt/c/Users/Estin/Documents/GitHub/Syalis
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Estin/Desktop/s/b/syalis/build
+CMAKE_BINARY_DIR = /mnt/c/Users/Estin/Documents/GitHub/Syalis/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles /mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles /mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +124,19 @@ test/fast:
 .PHONY : test/fast
 
 #=============================================================================
+# Target rules for targets named test_config
+
+# Build rule for target.
+test_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_config
+.PHONY : test_config
+
+# fast build rule for target.
+test_config/fast:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
+.PHONY : test_config/fast
+
+#=============================================================================
 # Target rules for targets named syalis
 
 # Build rule for target.
@@ -135,6 +148,33 @@ syalis: cmake_check_build_system
 syalis/fast:
 	$(MAKE) -f CMakeFiles/syalis.dir/build.make CMakeFiles/syalis.dir/build
 .PHONY : syalis/fast
+
+syalis/config.o: syalis/config.cc.o
+
+.PHONY : syalis/config.o
+
+# target to build an object file
+syalis/config.cc.o:
+	$(MAKE) -f CMakeFiles/syalis.dir/build.make CMakeFiles/syalis.dir/syalis/config.cc.o
+.PHONY : syalis/config.cc.o
+
+syalis/config.i: syalis/config.cc.i
+
+.PHONY : syalis/config.i
+
+# target to preprocess a source file
+syalis/config.cc.i:
+	$(MAKE) -f CMakeFiles/syalis.dir/build.make CMakeFiles/syalis.dir/syalis/config.cc.i
+.PHONY : syalis/config.cc.i
+
+syalis/config.s: syalis/config.cc.s
+
+.PHONY : syalis/config.s
+
+# target to generate assembly for a file
+syalis/config.cc.s:
+	$(MAKE) -f CMakeFiles/syalis.dir/build.make CMakeFiles/syalis.dir/syalis/config.cc.s
+.PHONY : syalis/config.cc.s
 
 syalis/log.o: syalis/log.cc.o
 
@@ -217,6 +257,33 @@ tests/test.cc.s:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
 
+tests/test_config.o: tests/test_config.cc.o
+
+.PHONY : tests/test_config.o
+
+# target to build an object file
+tests/test_config.cc.o:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.o
+.PHONY : tests/test_config.cc.o
+
+tests/test_config.i: tests/test_config.cc.i
+
+.PHONY : tests/test_config.i
+
+# target to preprocess a source file
+tests/test_config.cc.i:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.i
+.PHONY : tests/test_config.cc.i
+
+tests/test_config.s: tests/test_config.cc.s
+
+.PHONY : tests/test_config.s
+
+# target to generate assembly for a file
+tests/test_config.cc.s:
+	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
+.PHONY : tests/test_config.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -226,7 +293,11 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... test_config"
 	@echo "... syalis"
+	@echo "... syalis/config.o"
+	@echo "... syalis/config.i"
+	@echo "... syalis/config.s"
 	@echo "... syalis/log.o"
 	@echo "... syalis/log.i"
 	@echo "... syalis/log.s"
@@ -236,6 +307,9 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_config.o"
+	@echo "... tests/test_config.i"
+	@echo "... tests/test_config.s"
 .PHONY : help
 
 

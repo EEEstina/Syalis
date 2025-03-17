@@ -25,6 +25,13 @@ tests ---------- 测试代码
     Appender (日志输出位置)
 2. s
 
+## 配置系统
+
+Config -> Yaml
+
+yaml-cpp : github
+mkdir build && cd build && cmake .. && make && sudo make install
+
 ## 协程库封装
 
 将异步的操作封装成同步

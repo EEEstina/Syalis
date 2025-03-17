@@ -6,6 +6,44 @@
 
 #IncludeRegexTransform: 
 
+../syalis/log.h
+string
+-
+stdint.h
+-
+memory
+-
+list
+-
+sstream
+-
+fstream
+-
+vector
+-
+cstdarg
+-
+cstdio
+-
+map
+-
+util.h
+../syalis/util.h
+singleton.h
+../syalis/singleton.h
+
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.h
+memory
+-
+string
+-
+sstream
+-
+boost/lexical_cast.hpp
+-
+syalis/log.h
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/syalis/log.h
+
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.h
 string
 -
@@ -50,13 +88,9 @@ zconf.h
 stdint.h
 -
 
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/tests/test.cc
-iostream
--
-thread
--
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/tests/test_config.cc
 ../syalis/log.h
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.h
-../syalis/util.h
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.h
+../syalis/config.h
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.h
 

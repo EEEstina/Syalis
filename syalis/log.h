@@ -11,6 +11,7 @@
 #include <cstdarg>  // 必须：va_start, va_end
 #include <cstdio>   // 必须：vasprintf
 #include <map>
+#include "util.h"
 #include "singleton.h"
 
 #define SYALIS_LOG_LEVEL(logger, level) \
@@ -32,6 +33,8 @@
 #define SYALIS_LOG_FMT_WARN(logger, fmt, ...) SYALIS_LOG_FMT_LEVEL(logger, syalis::LogLevel::WARN, fmt, __VA_ARGS__)
 #define SYALIS_LOG_FMT_ERROR(logger, fmt, ...) SYALIS_LOG_FMT_LEVEL(logger, syalis::LogLevel::ERROR, fmt, __VA_ARGS__)
 #define SYALIS_LOG_FMT_FATAL(logger, fmt, ...) SYALIS_LOG_FMT_LEVEL(logger, syalis::LogLevel::FATAL, fmt, __VA_ARGS__)
+
+#define SYALIS_LOG_ROOT() syalis::LoggerMgr::GetInstance()->getRoot()
 
 namespace syalis {
 class Logger;
@@ -204,6 +207,7 @@ public:
     Logger::ptr getLogger(const std::string& name);
 
     void init();
+    Logger::ptr getRoot() const { return m_root; }
 private:
     std::map<std::string, Logger::ptr> m_loggers;
     Logger::ptr m_root;

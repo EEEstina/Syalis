@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "../lib/libsyalis.pdb"
   "../lib/libsyalis.so"
+  "CMakeFiles/syalis.dir/syalis/config.cc.o"
   "CMakeFiles/syalis.dir/syalis/log.cc.o"
   "CMakeFiles/syalis.dir/syalis/util.cc.o"
 )

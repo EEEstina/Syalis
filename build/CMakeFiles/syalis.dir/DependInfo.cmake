@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/log.cc" "/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/syalis.dir/syalis/log.cc.o"
-  "/mnt/c/Users/Estin/Desktop/s/b/syalis/syalis/util.cc" "/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/syalis.dir/syalis/util.cc.o"
+  "/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.cc" "/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/syalis.dir/syalis/config.cc.o"
+  "/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.cc" "/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/syalis.dir/syalis/log.cc.o"
+  "/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.cc" "/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/syalis.dir/syalis/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,6 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../."
   )
 
 # Targets to which this target links.

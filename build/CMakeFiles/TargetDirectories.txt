@@ -1,4 +1,5 @@
-/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/test.dir
-/mnt/c/Users/Estin/Desktop/s/b/syalis/build/CMakeFiles/syalis.dir
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/test.dir
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/test_config.dir
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/build/CMakeFiles/syalis.dir
