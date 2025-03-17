@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/test_config.dir/tests/test_config.cc.o  -o ../bin/test_config  -Wl,-rpath,/mnt/c/Users/Estin/Documents/GitHub/Syalis/lib ../lib/libsyalis.so 
+/usr/bin/c++  -g   CMakeFiles/test_config.dir/tests/test_config.cc.o  -o ../bin/test_config   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:/mnt/c/Users/Estin/Documents/GitHub/Syalis/lib ../lib/libsyalis.so -lyaml-cpp 

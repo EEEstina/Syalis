@@ -93,4 +93,6 @@ stdint.h
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.h
 ../syalis/config.h
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.h
+yaml-cpp/yaml.h
+-
 

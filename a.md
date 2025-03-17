@@ -31,6 +31,27 @@ Config -> Yaml
 
 yaml-cpp : github
 mkdir build && cd build && cmake .. && make && sudo make install
+/usr/local/include，库文件在/usr/local/lib
+
+```yaml
+
+logs:
+  - name: root
+    level: info
+    formatters: %d%T%m%n
+    appender:
+      - type: FileLogAppender
+        path: log.txt
+      - type: StdoutLogAppender
+  - name: system
+    level: debug
+    formatter: %d%T%m%n
+      - type: FileLogAppender
+        path: log.txt
+      - type: StdoutLogAppender
+#logs: object map型
+#'- name' - 为数组型
+```
 
 ## 协程库封装
 

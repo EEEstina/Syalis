@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/test.dir/tests/test.cc.o  -o ../bin/test  -Wl,-rpath,/mnt/c/Users/Estin/Documents/GitHub/Syalis/lib ../lib/libsyalis.so 
+/usr/bin/c++  -g   CMakeFiles/test.dir/tests/test.cc.o  -o ../bin/test   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib:/mnt/c/Users/Estin/Documents/GitHub/Syalis/lib ../lib/libsyalis.so 
