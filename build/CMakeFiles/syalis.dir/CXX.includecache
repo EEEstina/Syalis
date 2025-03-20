@@ -6,21 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.cc
-log.h
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.h
-map
+../syalis/config.h
+memory
 -
-iostream
+string
 -
-functional
+sstream
 -
-time.h
+boost/lexical_cast.hpp
 -
-string.h
+yaml-cpp/yaml.h
 -
+syalis/log.h
+../syalis/syalis/log.h
 
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.h
+../syalis/log.h
 string
 -
 stdint.h
@@ -42,13 +42,13 @@ cstdio
 map
 -
 util.h
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.h
+../syalis/util.h
 singleton.h
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/singleton.h
+../syalis/singleton.h
 
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/singleton.h
+../syalis/singleton.h
 
-/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/util.h
+../syalis/util.h
 pthread.h
 -
 unistd.h
@@ -63,4 +63,8 @@ zconf.h
 -
 stdint.h
 -
+
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/config.cc
+syalis/config.h
+/mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/syalis/config.h
 

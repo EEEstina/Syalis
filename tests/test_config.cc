@@ -33,11 +33,23 @@ void test_yaml() {
     //SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << root;
 }
 
-int main(int argc, char** argv) {
-    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << g_int_value_config->getValue();
-    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << g_float_value_config->toString();
+void test_config() {
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "before: " << g_int_value_config->getValue();
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "before: " << g_float_value_config->toString();
 
-    test_yaml();
+    YAML::Node root = YAML::LoadFile("/mnt/c/Users/Estin/Documents/GitHub/Syalis/bin/conf/log.yaml");
+    syalis::Config::LoadFileYaml(root);
+
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "after: " << g_float_value_config->toString();
+}
+
+int main(int argc, char** argv) {
+    // SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << g_int_value_config->getValue();
+    // SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << g_float_value_config->toString();
+
+    // test_yaml();
+    test_config();
 
     return 0;
 }

@@ -33,6 +33,23 @@ yaml-cpp : github
 mkdir build && cd build && cmake .. && make && sudo make install
 /usr/local/include，库文件在/usr/local/lib
 
+```cpp
+//YAML 加载文件，返回一个 YAML::Node 对象
+YAML::Node node = YAML::LoadFile(filename);
+node.IsMap();
+//map结构
+for(auto it = node.begin(); it != node.end(); ++it) { 
+  it->first; it->second; 
+}
+node.IsSequence();
+for(size_t i = 0; i < node.size(); ++i) {
+
+}
+node.IsScalar();
+```
+
+配置系统原则为约定优于配置
+
 ```yaml
 
 logs:

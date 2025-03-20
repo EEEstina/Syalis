@@ -41,6 +41,8 @@ sstream
 -
 boost/lexical_cast.hpp
 -
+yaml-cpp/yaml.h
+-
 syalis/log.h
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/syalis/log.h
 

@@ -1,17 +1,21 @@
 #ifndef __SYALIS_CONFIG_H__
 #define __SYALIS_CONFIG_H__
+
 #include <memory>
 #include <string>
 #include <sstream>
 #include <boost/lexical_cast.hpp>
+#include <yaml-cpp/yaml.h>
 #include "syalis/log.h"
 
 namespace syalis {
 
 class ConfigVarBase {
 public:
-   typedef std::shared_ptr<ConfigVarBase> ptr;
-    ConfigVarBase(const std::string& name, const std::string& description = "") : m_name(name), m_description(description) {}
+    typedef std::shared_ptr<ConfigVarBase> ptr;
+    ConfigVarBase(const std::string& name, const std::string& description = "") : m_name(name), m_description(description) {
+        std::transform(m_name.begin(), m_name.end(), m_name.begin(), ::tolower);
+    }
     virtual ~ConfigVarBase() {}
 
     const std::string getName() const { return m_name; }
@@ -20,7 +24,7 @@ public:
     virtual std::string toString() = 0;
     virtual bool fromString(const std::string& val) = 0;
 
-private:
+protected:
     std::string m_name;
     std::string m_description;
 
@@ -73,7 +77,7 @@ public:
             return tmp;
         }
 
-        if(name.find_first_not_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._012345678") != std::string::npos) {
+        if(name.find_first_not_of("abcdefghijklmnopqrstuvwxyz._012345678") != std::string::npos) {
             SYALIS_LOG_ERROR(SYALIS_LOG_ROOT()) << "Lookup name invalid " << name;
             throw std::invalid_argument(name);
         }
@@ -89,6 +93,10 @@ public:
         }
         return std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
     }
+
+    static void LoadFileYaml(const YAML::Node& root);
+
+    static ConfigVarBase::ptr LookupBase(const std::string& name);
 private:
     static ConfigVarMap s_datas;
 };
