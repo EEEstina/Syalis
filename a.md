@@ -60,6 +60,11 @@ template <F, T>
 LexicalCast
 
 //容器偏特化 支持vector
+// list, set, map, unordered_set, unordered_map
+// map/unordered_map 需要支持key = std::string
+
+// 问题: Config::Lookupo(key) , key相同, 类型不同, 不会报错
+
 ```
 
 ```yaml
