@@ -17,3 +17,6 @@ logs:
 system:
   port: 8081
   value: 15
+  vec_int:
+    - 10
+    - 30

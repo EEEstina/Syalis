@@ -50,6 +50,18 @@ node.IsScalar();
 
 配置系统原则为约定优于配置
 
+```cpp
+//Template, FromStr, ToStr 转化的方法
+template <T, FromStr, ToStr>
+class ConfigVar;
+
+//统一的通用模式
+template <F, T>
+LexicalCast
+
+//容器偏特化 支持vector
+```
+
 ```yaml
 
 logs:
