@@ -14,6 +14,10 @@ syalis::ConfigVar<std::set<int> >::ptr g_set_int_value_config = syalis::Config::
 
 syalis::ConfigVar<std::unordered_set<int> >::ptr g_uset_int_value_config = syalis::Config::Lookup("system.uset_int", std::unordered_set<int>{1, 2}, "system uset int");
 
+syalis::ConfigVar<std::map<std::string, int> >::ptr g_map_str_int_value_config = syalis::Config::Lookup("system.map_str_int", std::map<std::string, int>{{"k", 2}}, "system map str int");
+
+syalis::ConfigVar<std::unordered_map<std::string, int> >::ptr g_umap_str_int_value_config = syalis::Config::Lookup("system.umap_str_int", std::unordered_map<std::string, int>{{"k", 2}}, "system umap str int");
+
 void print_yaml(const YAML::Node& node, int level) {
     if(node.IsScalar()) {
         SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << std::string(level * 4, ' ') << node.Scalar() << " - " << node.Type() << " - " << level;
@@ -54,10 +58,21 @@ void test_config() {
         SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
     }
 
+#define XX_M(g_var, name, prefix) \
+    { \
+        auto& v = g_var->getValue(); \
+        for(auto& i : v) { \
+            SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << #prefix " " #name ": {" << i.first << " - " << i.second << "}"; \
+        } \
+        SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
+    }
+
     XX(g_vec_int_value_config, vec_int, before);
     XX(g_list_int_value_config, list_int, before);
     XX(g_set_int_value_config, set_int, before);
     XX(g_uset_int_value_config, uset_int, before);
+    XX_M(g_map_str_int_value_config, map_str_int, before);
+    XX_M(g_umap_str_int_value_config, umap_str_int, before);
 
     // auto v = g_vec_int_value_config->getValue();
     // for(auto& i : v) {
@@ -74,6 +89,8 @@ void test_config() {
     XX(g_list_int_value_config, list_int, after);
     XX(g_set_int_value_config, set_int, after);
     XX(g_uset_int_value_config, uset_int, after);
+    XX_M(g_map_str_int_value_config, map_str_int, after);
+    XX_M(g_umap_str_int_value_config, umap_str_int, after);
 
     // v = g_vec_int_value_config->getValue();
     // for(auto& i : v) {
