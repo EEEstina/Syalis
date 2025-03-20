@@ -20,3 +20,6 @@ system:
   vec_int:
     - 10
     - 30
+  list_int: [20, 40, 50]
+  set_int: [30, 20, 60, 20]
+  uset_int: [30, 20, 60, 20]

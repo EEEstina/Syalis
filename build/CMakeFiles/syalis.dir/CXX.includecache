@@ -19,6 +19,16 @@ yaml-cpp/yaml.h
 -
 syalis/log.h
 ../syalis/syalis/log.h
+vector
+-
+map
+-
+set
+-
+unordered_map
+-
+unordered_set
+-
 
 ../syalis/log.h
 string

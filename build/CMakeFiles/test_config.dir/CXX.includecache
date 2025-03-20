@@ -45,6 +45,16 @@ yaml-cpp/yaml.h
 -
 syalis/log.h
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/syalis/log.h
+vector
+-
+map
+-
+set
+-
+unordered_map
+-
+unordered_set
+-
 
 /mnt/c/Users/Estin/Documents/GitHub/Syalis/syalis/log.h
 string
