@@ -31,3 +31,33 @@ system:
     k: 130
     k2: 120
     k3: 110
+
+class:
+  person:
+    name: syalis
+    age: 24
+    sex: true
+  map:
+    syalix:
+      name: syalix
+      age: 25
+      sex: false
+    sya:
+      name: sya
+      age: 100
+      sex: true
+  vec_map:
+    k1:
+      - name: m1
+        age: 22
+        sex: true
+      - name: m2
+        age: 33
+        sex: false
+    k2:
+      - name: m21
+        age: 22
+        sex: true
+      - name: m22
+        age: 33
+        sex: false

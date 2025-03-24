@@ -28,6 +28,7 @@ public:
 
     virtual std::string toString() = 0;
     virtual bool fromString(const std::string& val) = 0;
+    virtual std::string getTypeName() const = 0;
 
 protected:
     std::string m_name;
@@ -248,6 +249,7 @@ public:
             setValue(FromStr()(val));
         } catch (std::exception& e) {
             SYALIS_LOG_ERROR(SYALIS_LOG_ROOT()) << "ConfigVar::fromString() exception" << e.what() << " convert: string to" << typeid(m_val).name();
+            // SYALIS_LOG_ERROR(SYALIS_LOG_ROOT()) << "ConfigVar::fromString() exception" << e.what() << " convert: string to" << typeid(m_val).name() << " - " << val;
 
         }
         return false;
@@ -260,6 +262,8 @@ public:
     void setValue(const T& v) {
         m_val = v;
     }
+
+    std::string getTypeName() const override { return typeid(T).name(); }
 private:
     T m_val;
 };
@@ -271,11 +275,24 @@ public:
 
     template<class T>
     static typename ConfigVar<T>::ptr Lookup(const std::string& name, const T& default_value, const std::string& description = "") {
-        auto tmp = Lookup<T>(name);
-        if(tmp) {
-            SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "Lookup name=" << name << " exists";
-            return tmp;
+
+        auto it = s_datas.find(name);
+        if(it != s_datas.end()) {
+            auto tmp = std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
+            if(tmp) {
+                SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "Lookup name=" << name << " exists";
+                return tmp;
+            } else {
+                SYALIS_LOG_ERROR(SYALIS_LOG_ROOT()) << "Lookup name=" << name << " exists but type not " << typeid(T).name() << " real_type=" << it->second->getTypeName() << " " << it->second->toString();
+                return nullptr;
+            }
         }
+
+        // auto tmp = Lookup<T>(name);
+        // if(tmp) {
+        //     SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "Lookup name=" << name << " exists";
+        //     return tmp;
+        // }
 
         if(name.find_first_not_of("abcdefghijklmnopqrstuvwxyz._012345678") != std::string::npos) {
             SYALIS_LOG_ERROR(SYALIS_LOG_ROOT()) << "Lookup name invalid " << name;

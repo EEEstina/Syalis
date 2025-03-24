@@ -4,6 +4,9 @@
 
 syalis::ConfigVar<int>::ptr g_int_value_config = syalis::Config::Lookup("system.port", (int)8080, "system port");
 
+// 错误样例，类型不匹配
+// syalis::ConfigVar<float>::ptr g_int_valuex_config = syalis::Config::Lookup("system.port", (float)8080, "system port");
+
 syalis::ConfigVar<float>::ptr g_float_value_config = syalis::Config::Lookup("system.value", (float)10.2f, "system value");
 
 syalis::ConfigVar<std::vector<int> >::ptr g_vec_int_value_config = syalis::Config::Lookup("system.vec_int", std::vector<int>{1, 2}, "system vec int");
@@ -42,7 +45,7 @@ void test_yaml() {
     // YAML::Node root = YAML::LoadFile("../bin/conf/log.yaml");
     print_yaml(root, 0);
 
-    //SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << root;
+    // SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << root;
 }
 
 void test_config() {
@@ -99,12 +102,86 @@ void test_config() {
 
 }
 
+class Person {
+public:
+    Person() {};
+    std::string m_name;
+    int m_age = 0;
+    bool m_sex = 0;
+
+    std::string toString() const {
+        std::stringstream ss;
+        ss << "[Person name=" << m_name << " age=" << m_age << " sex=" << m_sex << "]";
+        return ss.str();
+    }
+};
+
+namespace syalis {
+template<>
+class LexicalCast<std::string, Person> {
+public:
+    Person operator() (const std::string& v) {
+        YAML::Node node = YAML::Load(v);
+        Person p;
+        p.m_name = node["name"].as<std::string>();
+        p.m_age = node["age"].as<int>();
+        p.m_sex = node["sex"].as<bool>();
+        return p;
+    }
+};
+
+template<>
+class LexicalCast<Person, std::string> { 
+public:
+    std::string operator() (const Person& p) {
+        YAML::Node node;
+        node["name"] = p.m_name;
+        node["age"] = p.m_age;
+        node["sex"] = p.m_sex;
+        std::stringstream ss;
+        ss << node;
+        return ss.str();
+    }
+};
+}
+
+syalis::ConfigVar<Person>::ptr g_person = syalis::Config::Lookup("class.person", Person(), "system person");
+
+syalis::ConfigVar<std::map<std::string, Person> >::ptr g_person_map = syalis::Config::Lookup("class.map", std::map<std::string, Person>(), "system person");
+
+syalis::ConfigVar<std::map<std::string, std::vector<Person> > >::ptr g_person_vec_map = syalis::Config::Lookup("class.vec_map", std::map<std::string, std::vector<Person> >(), "system person");
+
+void test_class() {
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "before:" << g_person->getValue().toString() << " - " << g_person->toString();
+
+#define XX_PM(g_var, perfix) \
+    { \
+        auto m = g_person_map->getValue(); \
+        for(auto& i : m) { \
+            SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << perfix << ": " << i.first << " - " << i.second.toString(); \
+        } \
+        SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << perfix << ": size:" << m.size(); \
+    }
+
+    XX_PM(g_person_map, "class.map before");
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "class.vec_map before:" << g_person_vec_map->toString();
+
+    YAML::Node root = YAML::LoadFile("/mnt/c/Users/Estin/Documents/GitHub/Syalis/bin/conf/log.yaml");
+    syalis::Config::LoadFileYaml(root);
+
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "after:" << g_person->getValue().toString() << " - " << g_person->toString();
+
+    XX_PM(g_person_map, "class.map after");
+    SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << "class.vec_map after:" << g_person_vec_map->toString();
+}
+
 int main(int argc, char** argv) {
     // SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << g_int_value_config->getValue();
     // SYALIS_LOG_INFO(SYALIS_LOG_ROOT()) << g_float_value_config->toString();
 
     // test_yaml();
-    test_config();
+    // test_config();
+    test_class();
 
     return 0;
 }
